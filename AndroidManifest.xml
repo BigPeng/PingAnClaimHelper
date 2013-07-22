@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pingan.clainmhelper.main"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+
+    <application
+        android:name="com.pingan.claimhelper.main.Location"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.pingan.claimhelper.main.PingActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pingan.claimhelper.main.NewActivity"
+            android:label="@string/title_activity_new" >
+        </activity>
+        <activity android:name="com.pingan.claimhelper.main.AudioList" />
+        <activity
+            android:name="com.pingan.claimhelper.main.OpenClaim"
+            android:label="@string/title_activity_open_cliam" >
+        </activity>
+        <activity
+            android:name="com.pingan.claimhelper.main.NewClaim"
+            android:label="@string/title_activity_new_claim" >
+        </activity>
+        <activity
+            android:name="com.pingan.claimhelper.main.PhotoClaim"
+            android:label="@string/title_activity_photo_claim" >
+        </activity>
+        <activity
+            android:name="com.pingan.claimhelper.main.VoiceClaim"
+            android:label="@string/title_activity_voice_claim" >
+        </activity>
+        <activity
+            android:name="com.pingan.claimhelper.main.RecordList"
+            android:label="@string/title_activity_record_list" >
+        </activity>
+        <activity
+            android:name="com.pingan.claimhelper.photo.CameraHelper"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.pingan.claimhelper.photo.ImageDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+
+            <!--
+          		<intent-filter>
+				<action android:name="com.baidu.location.service_v2.9"></action>
+			</intent-filter>
+            -->
+        </service>
+    </application>
+
+</manifest>
